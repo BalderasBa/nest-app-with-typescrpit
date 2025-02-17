@@ -7,6 +7,7 @@ import { EmployeesModule } from './employees/employees.module';
 import { TestingsModule } from './testings/testings.module';
 import { UsersModule } from './users/users.module';
 import { APP_GUARD } from '@nestjs/core';
+import { MyLoggerModule } from './my-logger/my-logger.module';
 
 @Module({
   imports: [
@@ -34,6 +35,7 @@ import { APP_GUARD } from '@nestjs/core';
         limit: 100,
       },
     ]),
+    MyLoggerModule,
   ],
   controllers: [AppController],
   providers: [
